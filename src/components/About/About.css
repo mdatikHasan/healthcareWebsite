@@ -1,0 +1,36 @@
+.about-container{
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    text-align:left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:normal;
+    background-color: burlywood;
+    display: flex;
+    margin: 19px;
+    padding: 20px;
+    
+}
+.half-width{
+    width: 50%;
+}
+
+.ul-list{
+    text-align: left;
+}
+
+.about-container2{
+    font-family: 'Poppins', sans-serif;
+    font-weight:500;
+    text-align:left;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style:normal;
+    background-color:darkgrey;
+    display: flex;
+    margin: 19px;
+    padding: 20px;
+    
+}
+.first-container{
+    margin: 19px;
+    background-color: honeydew;
+}

@@ -1,0 +1,7 @@
+.services-container{
+    background-color: slateblue;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+    padding: 12px;
+}

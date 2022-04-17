@@ -1,0 +1,7 @@
+.doctor{
+    background-color: lightslategray;
+    margin: 25px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
