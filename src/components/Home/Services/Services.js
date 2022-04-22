@@ -14,10 +14,10 @@ const Services = () => {
         <h2 className='text-success'>Our services</h2>
             <div id='services' className='services-container'>
                 {
-                services.map((service)=> <Service
+                services.map((service)=><Service
                 key={service.id}
-                    service={service}
-                    ></Service>)
+                service={service}
+                ></Service>)
                 }
             </div>
         </>

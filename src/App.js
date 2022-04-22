@@ -1,5 +1,4 @@
-import { Route } from 'react-router-dom';
-import { Switch } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
@@ -10,6 +9,7 @@ import Home from './components/Home/Home/Home';
 import Services from './components/Home/Services/Services';
 import Login from './components/Login/Login/Login';
 import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Shops from './components/Shops/Shops';
 import AuthProvider from './context/AuthProvider';
 
@@ -19,35 +19,17 @@ function App() {
       <AuthProvider>
       <BrowserRouter>
       <Header></Header>
-        <Switch>
-          <Route exact path="/">
-            <Home></Home>
-          </Route>
-          <Route path="/home">
-            <Home></Home>
-          </Route>
-          <Route path="/services">
-            <Services></Services>
-          </Route>
-          <Route path="/shops">
-            <Shops></Shops>
-          </Route>
-          <Route path="/login">
-            <Login></Login>
-          </Route>
-          <Route path="/booking/:serviceId">
-            <Booking></Booking>
-          </Route>
-          <Route path="/about">
-            <About></About>
-          </Route>
-          <Route path="/doctor">
-            <Doctors></Doctors>
-          </Route>
-          <Route path="*">
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home></Home>}/>
+          <Route path="/home" element={<Home></Home>} />
+          <Route path="/services" element={<Services></Services>} />
+          <Route path="/shops" element={<PrivateRoute><Shops></Shops></PrivateRoute>}/>
+          <Route path="/login" element={<Login></Login>}/>
+          <Route path="/booking/:serviceId" element={<PrivateRoute><Booking></Booking></PrivateRoute>}/>
+          <Route path="/about" element={<PrivateRoute><About></About></PrivateRoute>} />
+          <Route path="/doctor" element={<Doctors></Doctors>}/>
+          <Route path="*"element={<NotFound></NotFound>}/>
+        </Routes>
       </BrowserRouter>
       </AuthProvider>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import './Banner.css';
 import { Button, Carousel } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -16,9 +17,9 @@ const Banner = () => {
       <h1 className="text-success">Best & Top Doctors</h1>
       <h1 className="text-success">In Our Clinic</h1>
       <p className='text-danger'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, illo.</p>
-      <Button variant="danger" size="lg">
+      <Link to="/about"><Button variant="danger" size="lg">
       See Details
-    </Button>
+    </Button></Link>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -32,9 +33,9 @@ const Banner = () => {
       <h1 className="text-success">We Provide Total</h1>
       <h1 className="text-success">Health Care Solution</h1>
       <p className='text-danger'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, labore.</p>
-      <Button variant="warning" size="lg">
+      <Link to="/about"><Button variant="danger" size="lg">
       See Details
-    </Button>
+    </Button></Link>
     </Carousel.Caption>
   </Carousel.Item>
   <Carousel.Item>
@@ -47,9 +48,9 @@ const Banner = () => {
     <h1 className="text-success">Best & Top Doctors</h1>
       <h1 className="text-success">In Our Clinic</h1>
       <p className='text-danger'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, illo.</p>
-      <Button variant="danger" size="lg">
+      <Link to="/about"><Button variant="danger" size="lg">
       See Details
-    </Button>
+    </Button></Link>
     </Carousel.Caption>
   </Carousel.Item>
 </Carousel>

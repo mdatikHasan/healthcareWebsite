@@ -1,6 +1,7 @@
 import React from 'react';
 import './About.css';
 import { Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 <div className='half-width'>
                 <p>TRUSTED HEALTH CARE CENTER</p>
@@ -44,7 +45,7 @@ const About = () => {
                     <li>The personal choices we make have a big impact</li>
                     <li>The hospital maintains a 24/7 Emergency</li>
                     <li>While many clinics offer more general healthcare</li>
-                    <Button className='mt-3' variant="success" size="lg">Read more</Button>
+                    <Link to='/doctor'><Button className='mt-3' variant="success" size="lg">Read more</Button></Link>
                 </ul>
             </div>
         </div>
